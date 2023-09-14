@@ -1,15 +1,10 @@
-const spinner = ['|', '/', '-', '\\', '|', '/', '-', '\\' , '|']
+const spinner = ['|   ', '/   ', '-   ', '\\   ', '|   ', '/   ', '-   ', '\\   ' , '|   ', '\n']
 let timer = 100;
 
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 10; i++) {
   setTimeout(() => {
-    process.stdout.write(`\r${spinner[i]}   `);
+    process.stdout.write(`\r${spinner[i]}`);
   }, timer);
 
   timer += 200;
 }
-
-// write new line for next terminal prompt
-setTimeout(() => {
-  process.stdout.write('\n');
-}, timer);
